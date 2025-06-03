@@ -1,0 +1,10 @@
+[project]
+name = "llama-stack-provider-custom-guard"
+version = "0.1.0"
+description = "Custom safety provider for llama stack"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "llama-stack",
+    "pydantic",
+]

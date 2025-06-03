@@ -1,0 +1,42 @@
+version: '2'
+image_name: llamastack-learn-external-providers
+container_image: null
+
+external_providers_dir: ./providers.d/
+
+apis:
+  - inference
+  - telemetry
+  - agents
+  - safety
+  - vector_io
+  - tool_runtime
+
+providers:
+  inference:
+    - provider_id: openai
+      provider_type: remote::openai
+      config:
+        api_key: ${env.OPENAI_API_KEY}
+  telemetry:
+    - provider_id: meta-reference
+      provider_type: inline::meta-reference
+      config:
+        sinks: ['console']
+  agents:
+    - provider_id: meta-reference
+      provider_type: inline::meta-reference
+      config:
+        persistence_store:
+          type: sqlite
+          namespace: null
+          db_path: ./agents_store.db
+
+models:
+  - model_id: gpt-4-turbo
+    provider_id: openai
+    model_type: llm
+    provider_model_id: gpt-4-turbo
+
+server:
+  port: 8321
