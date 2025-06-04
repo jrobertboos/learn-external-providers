@@ -1,7 +1,7 @@
 [project]
-name = "llama-stack-provider-custom-guard"
+name = "llama-stack-provider-grumpy-guard"
 version = "0.1.0"
-description = "Custom safety provider for llama stack"
+description = "Grumpy Guard safety provider for llama stack"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [

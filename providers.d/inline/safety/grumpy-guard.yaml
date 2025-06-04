@@ -1,0 +1,5 @@
+module: llama_stack_provider_grumpy_guard
+config_class: llama_stack_provider_grumpy_guard.GrumpyGuardConfig
+pip_packages: []
+api_dependencies: []
+optional_api_dependencies: []

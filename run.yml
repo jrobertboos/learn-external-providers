@@ -32,8 +32,8 @@ providers:
           namespace: null
           db_path: ./agents_store.db
   safety:
-    - provider_id: custom-guard
-      provider_type: inline::custom-guard
+    - provider_id: grumpy-guard
+      provider_type: inline::grumpy-guard
       config: {}
 
 models:

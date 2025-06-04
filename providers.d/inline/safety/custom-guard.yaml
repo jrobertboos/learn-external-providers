@@ -1,5 +1,0 @@
-module: llama_stack_provider_custom_guard
-config_class: llama_stack_provider_custom_guard.CustomGuardConfig
-pip_packages: []
-api_dependencies: []
-optional_api_dependencies: []

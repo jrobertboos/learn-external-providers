@@ -13,12 +13,12 @@ from llama_stack.providers.utils.inference.prompt_adapter import (
     interleaved_content_as_str,
 )
 
-from .config import CustomGuardConfig
+from .config import GrumpyGuardConfig
 
 log = logging.getLogger(__name__)
 
-class CustomGuardSafetyImpl(Safety):
-    def __init__(self, config: CustomGuardConfig, deps) -> None:
+class GrumpyGuardSafetyImpl(Safety):
+    def __init__(self, config: GrumpyGuardConfig, deps) -> None:
         self.config = config
 
     async def initialize(self) -> None:

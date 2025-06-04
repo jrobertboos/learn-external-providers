@@ -25,7 +25,7 @@ def main(host: str, port: int):
         selected_model = available_models[0]
         print(f"Using model: {selected_model}")
 
-    client.shields.register(shield_id="custom-guard-shield", provider_shield_id="custom-guard")
+    client.shields.register(shield_id="grumpy-guard-shield", provider_shield_id="grumpy-guard")
 
     agent = Agent(
         client=client,
@@ -35,7 +35,7 @@ def main(host: str, port: int):
             "strategy": {"type": "top_p", "temperature": 1.0, "top_p": 0.9},
         },
         tools=[],
-        input_shields=["custom-guard-shield"],
+        input_shields=["grumpy-guard-shield"],
         output_shields=[],
         enable_session_persistence=False,
     )
